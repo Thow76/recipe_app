@@ -8,6 +8,9 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: const EdgeInsets.all(15),
+      child: Text(title),
+    );
   }
 }
