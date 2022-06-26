@@ -3,16 +3,17 @@ import 'package:recipe_app/category_meals.dart';
 import 'category_meals.dart';
 
 class CategoryItem extends StatelessWidget {
+  final String id;
   final String title;
   final Color color;
 
-  CategoryItem(this.title, this.color);
+  CategoryItem(this.id, this.title, this.color);
 
   void selectCategory(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(
         builder: (_) {
-          return CategoryMealsScreen();
+          return CategoryMealsScreen(id, title);
         },
       ),
     );
