@@ -28,6 +28,8 @@ class MyApp extends StatelessWidget {
             )),
       ),
       // home: CategoriesScreen(),
+
+      // See 166: Diving deeper into named routes
       initialRoute: '/', // default is '/'
       routes: {
         '/': (ctx) => CategoriesScreen(),
