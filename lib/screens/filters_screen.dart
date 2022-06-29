@@ -32,6 +32,20 @@ class _FiltersScreenState extends State<FiltersScreen> {
               'Adjust your meal selection',
               style: Theme.of(context).textTheme.headline6,
             ),
+          ),
+          Expanded(
+            child: ListView(children: <Widget>[
+              SwitchListTile(
+                title: Text('Gluten-Free'),
+                value: _glutenFree,
+                subtitle: Text('Only include glutten-free meals'),
+                onChanged: (newValue) {
+                  setState(() {
+                    _glutenFree = newValue;
+                  });
+                },
+              )
+            ]),
           )
         ],
       ),
